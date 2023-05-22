@@ -10,14 +10,14 @@ Um gerenciador de senhas _**simples**_, feito em C# para um projeto escolar.
 * Código aberto!
 
 ### 🛠️ Feito Com
-.Net Framework 6.0 e Visual Studio Community 2022.
+.Net Framework 6.0 e Visual Studio Community 2022 e a biblioteca Spectre.Console.
 
 ## ✒️ Autores
 _Até onde tenho liberdade de compartilhar..._
 * João Pedro ([ZinhoRJ](https://github.com/ZinhoRJ)):
      - Programação e documentação.
 
-### 🔩 O Futuro do Projeto
+### 🔩 O Plano do Projeto
 Pretendemos terminar o software com uma base concreta, funcional, otimizada, porém, simples.
 Não pretendemos continuar ou evoluir o programa logo depois disso.
 
