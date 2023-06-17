@@ -23,6 +23,7 @@ Não pretendemos continuar ou evoluir o programa logo depois disso.
 
 ## 📄 Licença
 Open-Source, sob a GNU License - uso pessoal, comercial e modificações liberadas.
+Para mais informações, leia [LICENSE.txt](https://github.com/ZinhoRJ/PWD-MGR/blob/master/LICENSE.txt)
 
 ---
 Com o carinho de ZinhoRJ! 😊
