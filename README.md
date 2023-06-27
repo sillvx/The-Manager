@@ -22,7 +22,7 @@ Pretendemos terminar o software com uma base concreta, funcional, otimizada, por
 Não pretendemos continuar ou evoluir o programa logo depois disso.
 
 ## 📄 Licença
-Open-Source, sob a GNU License - uso pessoal, comercial e modificações liberadas.
+Open-Source, sob a GNU License - uso pessoal, comercial e modificações liberadas _**após a permissão unanime dos membros do projeto**_.
 Para mais informações, leia [LICENSE.txt](https://github.com/ZinhoRJ/PWD-MGR/blob/master/LICENSE.txt)
 
 ---
