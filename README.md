@@ -14,8 +14,12 @@ Um gerenciador de senhas _**simples**_, feito em C# para um projeto escolar.
 
 ## ✒️ Autores
 _Até onde tenho liberdade de compartilhar..._
-* João Pedro ([ZinhoRJ](https://github.com/ZinhoRJ)):
-     - Programação e documentação.
+* Adriano Melchíades;
+* Arthur de Carvalho;
+* João Pedro P;
+* João Pedro V ([ZinhoRJ](https://github.com/ZinhoRJ));
+* Juan Guilherme;
+* Laila Mesquita;
 
 ### 🔩 O Plano do Projeto
 Pretendemos terminar o software com uma base concreta, funcional, otimizada, porém, simples.
