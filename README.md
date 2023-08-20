@@ -1,5 +1,5 @@
 ![GNU](https://img.shields.io/badge/licen%C3%A7a-GNU%20v3.0-green) ![C#](https://img.shields.io/badge/linguagem-C%23-blue) ![alpha](https://img.shields.io/badge/vers%C3%A3o-alpha-9cf)
-# **PWD-MGR**
+# **The Manager**
 Um gerenciador de senhas _**simples**_, feito em C# para um projeto escolar.
 
 ## ✨ Funções
