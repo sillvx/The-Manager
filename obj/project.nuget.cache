@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "/QAbRunsx42mCUofZJf1Tl5FdI8HuaAEbL+b4WijFtcdbfELOaNZixhvdIPMwF5z7jsfuX55Cu/NFOrnw7G8sw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\joaoz\\source\\repos\\Gerenciador de Senhas\\Gerenciador de Senhas.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\joaoz\\.nuget\\packages\\spectre.console\\0.47.0\\spectre.console.0.47.0.nupkg.sha512",
+    "C:\\Users\\joaoz\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512"
+  ],
+  "logs": []
+}
