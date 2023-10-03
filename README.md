@@ -1,7 +1,12 @@
 ![GNU](https://img.shields.io/badge/licen%C3%A7a-GNU%20v3.0-green) ![C#](https://img.shields.io/badge/linguagem-C%23-blue) ![alpha](https://img.shields.io/badge/vers%C3%A3o-alpha-9cf)
+
+<p align="center">
+  <img width="900" height="220" src="https://github.com/ZinhoRJ/The-Manager/blob/master/logo.png?raw=true">
+</p>
+
 # **The Manager**
 Um gerenciador de senhas _**simples**_, feito em C# para um projeto escolar.
-
+  
 ## ✨ Funções
 * GUI em Console
 * Criptografia de senhas
