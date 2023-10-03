@@ -1,0 +1,17 @@
+C:\Users\joaoz\source\repos\Gerenciador de Senhas\bin\Debug\net6.0\Gerenciador de Senhas.exe
+C:\Users\joaoz\source\repos\Gerenciador de Senhas\bin\Debug\net6.0\Gerenciador de Senhas.deps.json
+C:\Users\joaoz\source\repos\Gerenciador de Senhas\bin\Debug\net6.0\Gerenciador de Senhas.runtimeconfig.json
+C:\Users\joaoz\source\repos\Gerenciador de Senhas\bin\Debug\net6.0\Gerenciador de Senhas.dll
+C:\Users\joaoz\source\repos\Gerenciador de Senhas\bin\Debug\net6.0\Gerenciador de Senhas.pdb
+C:\Users\joaoz\source\repos\Gerenciador de Senhas\bin\Debug\net6.0\Spectre.Console.dll
+C:\Users\joaoz\source\repos\Gerenciador de Senhas\obj\Debug\net6.0\Gerenciador de Senhas.csproj.AssemblyReference.cache
+C:\Users\joaoz\source\repos\Gerenciador de Senhas\obj\Debug\net6.0\Gerenciador de Senhas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joaoz\source\repos\Gerenciador de Senhas\obj\Debug\net6.0\Gerenciador de Senhas.AssemblyInfoInputs.cache
+C:\Users\joaoz\source\repos\Gerenciador de Senhas\obj\Debug\net6.0\Gerenciador de Senhas.AssemblyInfo.cs
+C:\Users\joaoz\source\repos\Gerenciador de Senhas\obj\Debug\net6.0\Gerenciador de Senhas.csproj.CoreCompileInputs.cache
+C:\Users\joaoz\source\repos\Gerenciador de Senhas\obj\Debug\net6.0\Gerenciador de Senhas.csproj.CopyComplete
+C:\Users\joaoz\source\repos\Gerenciador de Senhas\obj\Debug\net6.0\Gerenciador de Senhas.dll
+C:\Users\joaoz\source\repos\Gerenciador de Senhas\obj\Debug\net6.0\refint\Gerenciador de Senhas.dll
+C:\Users\joaoz\source\repos\Gerenciador de Senhas\obj\Debug\net6.0\Gerenciador de Senhas.pdb
+C:\Users\joaoz\source\repos\Gerenciador de Senhas\obj\Debug\net6.0\Gerenciador de Senhas.genruntimeconfig.cache
+C:\Users\joaoz\source\repos\Gerenciador de Senhas\obj\Debug\net6.0\ref\Gerenciador de Senhas.dll
