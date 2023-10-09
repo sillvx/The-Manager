@@ -8,12 +8,13 @@ namespace Gerenciador_de_Senhas
     {
         static void Main(string[] args)
         {
+            //declaração de vetores e variáveis que iremos usar na frente
             string[] nome = new string[6];
             string[] login = new string[6];
             string[] senha = new string[6];
             string[] obs = new string[6];
-            string nome1 = "";
-            int ncad = 0;
+            int ncad = 0;                                           //contador de número de cadastros
+            int i = 0;                                             //indice do while na hora de cadastrar
             
             //programa começa a partir daqui:
             var linhamestra = new Rule("[white]SENHA-MESTRA:[/]");    //linha de cima (rule)
@@ -39,14 +40,14 @@ namespace Gerenciador_de_Senhas
             string tentativa;
 
             tentativa = AnsiConsole.Prompt(                                                    //esse é, básicamente, um Console.ReadLine();
-                new TextPrompt<string>("[blue]Digite a sua[/] [bold blue]Senha-Mestra:[/] ")  //AnsiConsole.Prompt gera a escrita da senha
-                    .PromptStyle("white")                                                   //.PromptStyle é a cor dos *****
+                new TextPrompt<string>("[blue]Digite[/] [white]novamente[/] [blue]sua Senha-Mestra:[/] ")  //AnsiConsole.Prompt gera a escrita da senha
+                    .PromptStyle("white")                                                    //.PromptStyle é a cor dos *****
                     .Secret());                        //são duas váriáveis, a que definimos no passo anterior, e que receberá pelo teclado agora
 
 
             if (tentativa == mestra)
             {
-                Console.WriteLine("funcionou");                             //caso a Tentativa seja igual a Senha-Mestra, o programa vai para (goto) Iniciar
+                                                                            //caso a Tentativa seja igual a Senha-Mestra, o programa vai para (goto) Iniciar
                 goto iniciar;                                               //iniciar é onde fica o nosso menu
 
             }
@@ -66,6 +67,7 @@ namespace Gerenciador_de_Senhas
                     .Centered()                             //alinha a logo ao centro
                     .Color(Color.Blue));                    //define azul como a cor.
 
+
             var mode = AnsiConsole.Prompt(                                  //AnsiConsole.Prompt vai criar uma listagem com as opções do menu iniciar
                 new SelectionPrompt<string>()                               //.title vai definir oq vai ficar escrito em cima dessa lista
                     //.Title("Gerenciador de Senhas")
@@ -74,12 +76,6 @@ namespace Gerenciador_de_Senhas
                          "Cadastrar senhas", "Ver seus cadastros",          //addChoices definine nossas opções de menu
                          "Mudar Senha-Mestra",  "Sair do Programa" 
                         }));
-
-            bool vazio = true;                                          //boolean para verificar se já há alguma senha criada, isso vai nos ajudar futuramente
-
-            string[] senha1 = new string[4];
-            
-
 
             //a partir daqui, o sistema de IFs para entrar nas seções de cada opção do menu
             if (mode == "Cadastrar senhas")
@@ -90,51 +86,47 @@ namespace Gerenciador_de_Senhas
                 Thread.Sleep(1000);
                 Console.Clear();
 
-                if (ncad == 1)
+                if (ncad >= 6)
                 {
-                    AnsiConsole.MarkupLine("Por favor, dê um nome ao cadastro.");
-                    nome[0] = Console.ReadLine();
-                    AnsiConsole.MarkupLine("Digite o Login. [grey](usuário ou e-mail)[/]");
-                    login[0] = Console.ReadLine();
-                    AnsiConsole.MarkupLine("Digite a senha.");
-                    senha[0] = Console.ReadLine();
-                    AnsiConsole.MarkupLine("Digite observações de sua escolha. [grey]ou deixe em branco se preferir[/]");
-                    obs[0] = Console.ReadLine();
-                    AnsiConsole.WriteLine("{0}, {1}, {2}, {3}", nome[0], login[0], senha[0], obs[0]);
-                    
-                }
-                if (ncad == 2)
-                {
-                    AnsiConsole.WriteLine("avc");
+                    AnsiConsole.MarkupLine("[reverse red]Limite Atingido!!![/]");
+                    Thread.Sleep(2000);
+                    mode = "";
+                    goto iniciar;
                 }
 
+                var ruleNome = new Rule("[blue]Nome[/]");
+                ruleNome.LeftJustified();
+                AnsiConsole.Write(ruleNome);
+                AnsiConsole.MarkupLine(" 1 - Por favor, dê um nome ao cadastro.");
+                nome[i] = Console.ReadLine();
 
-                                                //criamos um vetor com 4 informações: nome, login, senha e observações  
+                var ruleLogin = new Rule("[blue]Login[/]");
+                ruleLogin.LeftJustified();
+                AnsiConsole.Write(ruleLogin);
+                AnsiConsole.MarkupLine(" 2 - Digite o Login. [grey](usuário ou e-mail)[/]");
+                login[i] = Console.ReadLine();
 
-                AnsiConsole.MarkupLine("Por favor, dê um nome ao cadastro.");
-                nome1 = Console.ReadLine();
+                var ruleSenha = new Rule("[blue]Senha[/]");
+                ruleSenha.LeftJustified();
+                AnsiConsole.Write(ruleSenha);
+                AnsiConsole.MarkupLine(" 3 - Digite a senha que deseja salvar.");
+                senha[i] = Console.ReadLine();
 
-                AnsiConsole.MarkupLine("Digite o Login. [grey](usuário ou e-mail)[/]");
-                senha1[1] = Console.ReadLine();
+                var ruleObs = new Rule("[blue]Observações[/]");
+                ruleObs.LeftJustified();
+                AnsiConsole.Write(ruleObs);
+                AnsiConsole.MarkupLine(" 4 - Digite observações de sua escolha. [grey]ou deixe em branco se preferir[/]");
+                obs[i] = Console.ReadLine();
 
-                AnsiConsole.MarkupLine("Digite a senha.");
-                senha1[2] = Console.ReadLine();
+                i++;
 
-                AnsiConsole.MarkupLine("Digite observações de sua escolha. [grey]ou deixe em branco se preferir[/]");
-                senha1[3] = Console.ReadLine();
-
-                Console.WriteLine("{0}, {1}, {2}, {3}", nome1, senha1[1], senha1[2], senha1[3]);  //ao final do cadastro, mostra cada informação
                 Console.ReadKey();
-
                 goto iniciar;
-
-                vazio = true;
             }
 
-            if (mode == "Ver seus cadastros")                              
-            {
-                Console.Clear();
-                var linhacadastros = new Rule("[blue]CADASTROS:[/]");
+            if (mode == "Ver seus cadastros")
+            { 
+                var linhacadastros = new Rule("[white]CADASTROS:[/]");
                 linhacadastros.Justification = Justify.Left;
                 linhacadastros.Style = Style.Parse("blue");
                 AnsiConsole.Write(linhacadastros);
@@ -142,35 +134,95 @@ namespace Gerenciador_de_Senhas
                 var cadastros = AnsiConsole.Prompt(
                    new SelectionPrompt<string>()
                        .AddChoices(new[] {
-                            "Login RollBack RX", "Acesso ao Sistema", "Gmail Empresa", "Voltar ao menu inicial.", nome1
+                            "[underline blue]<- Voltar ao menu inicial.[/]", "Login RollBack RX", "Acesso ao Sistema", "Gmail Empresa", nome[0],
+                            nome[1], nome[2], nome[3], nome[4], nome[5]
                        }));
-                if (cadastros == "Login RollBack RX")
-                {
-                    Console.WriteLine("enis");
-                }
-                if (cadastros == "Voltar ao menu inicial.")
+                if (cadastros == "[underline blue]<- Voltar ao menu inicial.[/]")
                 {
                     cadastros = "";
                     goto iniciar;
                 }
-
-                //REMOVER
-                var criar = AnsiConsole.Prompt(
-                    new SelectionPrompt<string>()
-                        .Title("[underline]Deseja cadastrar sua primeira senha[/]?")  //(pedindo para criar)
-                        .PageSize(3)
-                        .MoreChoicesText("[grey](bazinga)[/]") //PLACEHOLDER !!!! 
-                        .AddChoices(new[] {
-                            "Sim", "Não",                                             //aqui é a confirmação, se quer ou não criar
-                    }));
-                if (criar == "Não")
+                if (cadastros == "Login RollBack RX")
                 {
-                    criar = "";
-                    goto iniciar;                                                     //se ele escolher "não", volta ao menu
+                    AnsiConsole.MarkupLine("Nome: Login RollBack RX");
+                    AnsiConsole.MarkupLine("Login: Administrator");
+                    AnsiConsole.MarkupLine("Senha: 4590");
+                    AnsiConsole.MarkupLine("Observações: Exemplo com informações de login para o Rollback RX.");
+                    Console.ReadKey();
+                    goto iniciar;
                 }
-                else
+                if (cadastros == "Acesso ao Sistema")
                 {
-                    mode = "Cadastrar senhas";                                                        //...
+                    AnsiConsole.MarkupLine("Nome: Acesso ao Sistema");
+                    AnsiConsole.MarkupLine("Login: root");
+                    AnsiConsole.MarkupLine("Senha: 9060");
+                    AnsiConsole.MarkupLine("Observações: Exemplo com informações de login para o sistema de uma empresa.");
+                    Console.ReadKey();
+                    goto iniciar;
+                }
+                if (cadastros == "Gmail Empresa")
+                {
+                    AnsiConsole.MarkupLine("Nome: Gmail Empresa");
+                    AnsiConsole.MarkupLine("Login: farmacia@gmail.com");
+                    AnsiConsole.MarkupLine("Senha: Farmacia123@");
+                    AnsiConsole.MarkupLine("Observações: Exemplo com informações de acesso à um e-mail empresarial.");
+                    Console.ReadKey();
+                    goto iniciar;
+                }
+
+                if (cadastros == nome[0])
+                {
+                    AnsiConsole.MarkupLine("Nome: {0}", nome[0]);
+                    AnsiConsole.MarkupLine("Login: {0}", login[0]);
+                    AnsiConsole.MarkupLine("Senha: {0}", senha[0]);
+                    AnsiConsole.MarkupLine("Observações: {0}", obs[0]);
+                    Console.ReadKey();
+                    goto iniciar;
+                }
+                if (cadastros == nome[1])
+                {
+                    AnsiConsole.MarkupLine("Nome: {0}", nome[1]);
+                    AnsiConsole.MarkupLine("Login: {0}", login[1]);
+                    AnsiConsole.MarkupLine("Senha: {0}", senha[1]);
+                    AnsiConsole.MarkupLine("Observações: {0}", obs[1]);
+                    Console.ReadKey();
+                    goto iniciar;
+                }
+                if (cadastros == nome[2])
+                {
+                    AnsiConsole.MarkupLine("Nome: {0}", nome[2]);
+                    AnsiConsole.MarkupLine("Login: {0}", login[2]);
+                    AnsiConsole.MarkupLine("Senha: {0}", senha[2]);
+                    AnsiConsole.MarkupLine("Observações: {0}", obs[2]);
+                    Console.ReadKey();
+                    goto iniciar;
+                }
+                if (cadastros == nome[3])
+                {
+                    AnsiConsole.MarkupLine("Nome: {0}", nome[3]);
+                    AnsiConsole.MarkupLine("Login: {0}", login[3]);
+                    AnsiConsole.MarkupLine("Senha: {0}", senha[3]);
+                    AnsiConsole.MarkupLine("Observações: {0}", obs[3]);
+                    Console.ReadKey();
+                    goto iniciar;
+                }
+                if (cadastros == nome[4])
+                {
+                    AnsiConsole.MarkupLine("Nome: {0}", nome[4]);
+                    AnsiConsole.MarkupLine("Login: {0}", login[4]);
+                    AnsiConsole.MarkupLine("Senha: {0}", senha[4]);
+                    AnsiConsole.MarkupLine("Observações: {0}", obs[4]);
+                    Console.ReadKey();
+                    goto iniciar;
+                }
+                if (cadastros == nome[5])
+                {
+                    AnsiConsole.MarkupLine("Nome: {0}", nome[5]);
+                    AnsiConsole.MarkupLine("Login: {0}", login[5]);
+                    AnsiConsole.MarkupLine("Senha: {0}", senha[5]);
+                    AnsiConsole.MarkupLine("Observações: {0}", obs[5]);
+                    Console.ReadKey();
+                    goto iniciar;
                 }
             }
 
@@ -185,7 +237,6 @@ namespace Gerenciador_de_Senhas
                     Console.Clear();
                     Console.WriteLine(@"Essa é a senha-mestra atual: {0}
 Digite a nova senha.", mestra); //mostra a Mestra original
-                    string novamestra;
                     mestra = Console.ReadLine(); //input para a nova mestra
                     goto iniciar;
                 }
@@ -197,6 +248,7 @@ Digite a nova senha.", mestra); //mostra a Mestra original
                     goto iniciar;
                 }
             }
+            
             else                                                //caso escolha "fechar o programa"
             { 
                 Environment.Exit(0);                            //Fecha o programa.
