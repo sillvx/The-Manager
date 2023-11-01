@@ -5,17 +5,10 @@
 </p>
 
 # **The Manager**
-Um gerenciador de senhas _**simples**_, feito em C# para um projeto escolar.
+Um gerenciador de senhas _**simples**_ para um projeto escolar.
   
-## ✨ Funções
-* GUI em Console
-* Criptografia de senhas
-* Criador de senhas aleatórias
-* Conselheiro de segurança
-* Código aberto!
-
-### 🛠️ Feito Com
-.Net Framework 6.0 e Visual Studio Community 2022 e a biblioteca Spectre.Console.
+## 🛠️ Feito Com
+C# no .Net 6.0 e Visual Studio Community 2022, além da biblioteca Spectre.Console.
 
 ## ✒️ Autores
 _Até onde tenho liberdade de compartilhar..._
