@@ -10,22 +10,12 @@ Um gerenciador de senhas _**simples**_ para um projeto escolar.
 ## 🛠️ Feito Com
 C# no .Net 6.0 e Visual Studio Community 2022, além da biblioteca Spectre.Console.
 
-## ✒️ Autores
-_Até onde tenho liberdade de compartilhar..._
-* Adriano Melchíades;
-* Arthur de Carvalho;
-* João Pedro P;
-* João Pedro V ([ZinhoRJ](https://github.com/ZinhoRJ));
-* Juan Guilherme;
-* Laila Mesquita;
-
 ### 🔩 O Plano do Projeto
 Pretendemos terminar o software com uma base concreta, funcional, otimizada, porém, simples.
 Não pretendemos continuar ou evoluir o programa logo depois disso.
 
 ## 📄 Licença
-Open-Source, sob a GNU License - uso pessoal, comercial e modificações liberadas _**após a permissão unanime dos membros do projeto**_.
-Para mais informações, leia [LICENSE.txt](https://github.com/ZinhoRJ/PWD-MGR/blob/master/LICENSE.txt)
+Open-Source, sob a GNU License: uso pessoal, comercial e modificações liberadas, sob a regra de não plágio e a permanente gratuidade do software e seus derivados. Leia [LICENSE.txt](https://github.com/ZinhoRJ/PWD-MGR/blob/master/LICENSE.txt) para mais informações.
 
 ---
 Com o carinho de ZinhoRJ! 😊
