@@ -27,4 +27,4 @@ Open-Source, sob a GNU License: uso pessoal, comercial e modificações liberada
 - [x] Liberar a versão final como release.
 
 ---
-Com o carinho de sillvx! 😊
+Com o carinho de sillvx e ZinhoRJ! 😊
