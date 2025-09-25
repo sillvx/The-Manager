@@ -30,4 +30,4 @@ Open-Source, sob a GNU License - uso pessoal, comercial e modificações liberad
 Para mais informações, leia [LICENSE.txt](https://github.com/ZinhoRJ/PWD-MGR/blob/master/LICENSE.txt)
 
 ---
-Com o carinho de ZinhoRJ! 😊
+Com o carinho de sillvx! 😊
